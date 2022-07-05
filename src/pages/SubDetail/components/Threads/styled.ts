@@ -62,7 +62,7 @@ export const StyledSubtitle = styled.span`
   font-size: 13px;
   font-weight: 200;
   font-style: normal;
-  color: lightgrey;
+  color: grey;
   margin-top: 5px;
 `;
 

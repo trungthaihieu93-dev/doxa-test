@@ -26,7 +26,7 @@ export default function Cover(props: CoverProps) {
             alt="subAvatar"
             src={subAvatar || '/assets/reddit.svg'}
           />
-          <StyedSubName>Sub</StyedSubName>
+          <StyedSubName>{subName}</StyedSubName>
         </StyledSubInfoContainer>
       </div>
     </StyledContainer>

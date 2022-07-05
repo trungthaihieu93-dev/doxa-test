@@ -3,22 +3,24 @@ module.exports = {
     {
       id: 's1',
       subName: 'Sub 1',
-      subAvatar: '',
+      subAvatar:
+        'https://d33wubrfki0l68.cloudfront.net/fcd4ecd90386aeb50a235ddc4f0063cfbb8a7b66/4295e/static/bfc04ac72981166c740b189463e1f74c/40129/eth-diamond-black-white.jpg',
     },
     {
       id: 's2',
       subName: 'Sub 2',
-      subAvatar: '',
+      subAvatar:
+        'https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/1024/Binance-Coin-BNB-icon.png',
     },
     {
       id: 's3',
       subName: 'Sub 3',
-      subAvatar: '',
+      subAvatar: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png',
     },
     {
       id: 's4',
       subName: 'Sub 4',
-      subAvatar: '',
+      subAvatar: 'https://dmccdn.com/uploads/Polkadotsymbolcolor.png',
     },
   ],
   threads: [
@@ -31,6 +33,7 @@ module.exports = {
       numOfComments: 10,
       numOfVotes: 10,
       createdAt: '2022-07-05T09:27:01.935Z',
+      sub: 's1',
     },
     {
       id: 't2',
@@ -41,6 +44,7 @@ module.exports = {
       numOfComments: 10,
       numOfVotes: 10,
       createdAt: '2022-07-05T09:27:01.935Z',
+      sub: 's1',
     },
     {
       id: 't3',
@@ -51,6 +55,7 @@ module.exports = {
       numOfComments: 10,
       numOfVotes: 10,
       createdAt: '2022-07-05T09:27:01.935Z',
+      sub: 's1',
     },
     {
       id: 't4',
@@ -61,6 +66,7 @@ module.exports = {
       numOfComments: 10,
       numOfVotes: 10,
       createdAt: '2022-07-05T09:27:01.935Z',
+      sub: 's1',
     },
   ],
 }

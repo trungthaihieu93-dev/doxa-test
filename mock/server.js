@@ -41,9 +41,13 @@ server.get('/subs/:id', (req, res) => {
 })
 
 // Threads
-server.get('/threads', (_, res) => {
+server.get('/threads', (req, res) => {
   try {
-    return res.json(threads)
+    const { sub } = req.query
+
+    if (!sub) return res.json(threads)
+
+    return res.json(threads.filter((thread) => thread.sub === sub))
   } catch (error) {
     console.error(error)
     return res.status(500).send(error)

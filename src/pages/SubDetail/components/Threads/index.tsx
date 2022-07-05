@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
+import moment from 'moment';
 
 import { Thread } from '../../../../core/types/thread';
 import { THREAD_ROUTE } from '../../../../router/routes';
@@ -30,19 +31,23 @@ export default function Threads(props: ThreadsProps) {
 
   return (
     <StyledContainer>
-      {['test1', 'test2'].map((thread) => (
+      {threads.length === 0 && 'No thread found'}
+      {threads.map((thread) => (
         <StyledThreadContainer
-          key={thread}
+          key={thread.id}
           onClick={() => navigateTo(THREAD_ROUTE)}
         >
           <StyledVoteContainer>
             <StyledVoteIcon alt="upvote" src="/assets/up_arrow.svg" />
-            <StyledNumberOfVotes>123</StyledNumberOfVotes>
+            <StyledNumberOfVotes>{thread.numOfVotes}</StyledNumberOfVotes>
             <StyledVoteIcon alt="downvote" src="/assets/down_arrow.svg" />
           </StyledVoteContainer>
           <StyledGeneralInfoContainer>
-            <StyledTitle>Title</StyledTitle>
-            <StyledSubtitle>Subtitle</StyledSubtitle>
+            <StyledTitle>{thread.title}</StyledTitle>
+            <StyledSubtitle>
+              Posted by <b>{thread.poster}</b> at
+              {moment(thread.createdAt).format(' hh:mm dd/MM/YYYY')}
+            </StyledSubtitle>
             <StyledInteractionContainer>
               <StyledInteractionIcon alt="preview" src="/assets/preview.svg" />
               <StyledVerticalDivider />
