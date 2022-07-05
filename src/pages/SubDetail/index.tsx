@@ -6,6 +6,7 @@ import { StyledContainer } from './styled';
 import Cover from './components/Cover';
 import Tabs from './components/Tabs';
 import Filter from './components/Filter';
+import Threads from './components/Threads';
 
 export default function SubDetail() {
   const navigateTo = useNavigate();
@@ -19,6 +20,7 @@ export default function SubDetail() {
       <Cover src="" />
       <Tabs />
       <Filter />
+      <Threads threads={[]} />
     </StyledContainer>
   );
 }

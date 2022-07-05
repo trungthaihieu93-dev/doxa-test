@@ -7,6 +7,7 @@ export const StyledContainer = styled.div`
   height: 50px;
   padding-left: 20px;
   margin-top: 10px;
+  background-color: #ffffff;
 `;
 
 export const StyledTitle = styled.span`
