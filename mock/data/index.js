@@ -1,5 +1,66 @@
-module.exports = { 
-  search: [],
-  best: [],
-  hot: []
+module.exports = {
+  subs: [
+    {
+      id: 's1',
+      subName: 'Sub 1',
+      subAvatar: '',
+    },
+    {
+      id: 's2',
+      subName: 'Sub 2',
+      subAvatar: '',
+    },
+    {
+      id: 's3',
+      subName: 'Sub 3',
+      subAvatar: '',
+    },
+    {
+      id: 's4',
+      subName: 'Sub 4',
+      subAvatar: '',
+    },
+  ],
+  threads: [
+    {
+      id: 't1',
+      poster: 'poster 1',
+      title: 'Thread 1',
+      description: 'Description 1',
+      category: 'Category 1',
+      numOfComments: 10,
+      numOfVotes: 10,
+      createdAt: '2022-07-05T09:27:01.935Z',
+    },
+    {
+      id: 't2',
+      poster: 'poster 2',
+      title: 'Thread 2',
+      description: 'Description 1',
+      category: 'Category 1',
+      numOfComments: 10,
+      numOfVotes: 10,
+      createdAt: '2022-07-05T09:27:01.935Z',
+    },
+    {
+      id: 't3',
+      poster: 'poster 3',
+      title: 'Thread 3',
+      description: 'Description 1',
+      category: 'Category 1',
+      numOfComments: 10,
+      numOfVotes: 10,
+      createdAt: '2022-07-05T09:27:01.935Z',
+    },
+    {
+      id: 't4',
+      poster: 'poster 4',
+      title: 'Thread 4',
+      description: 'Description 1',
+      category: 'Category 1',
+      numOfComments: 10,
+      numOfVotes: 10,
+      createdAt: '2022-07-05T09:27:01.935Z',
+    },
+  ],
 }

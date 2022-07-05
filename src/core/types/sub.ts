@@ -1,5 +1,5 @@
 export interface Sub {
   id: string;
-  title: string;
   subName: string;
+  subAvatar: string;
 }

@@ -1,9 +1,10 @@
 export interface Thread {
   id: string;
-  username: string;
-  createdAt: string;
+  poster: string;
   title: string;
+  description: string;
   category: string;
   numOfComments: number;
   numOfVotes: number;
+  createdAt: string;
 }

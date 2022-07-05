@@ -4,7 +4,6 @@ import { Routes, Route } from 'react-router-dom';
 import Main from '../pages/Main';
 import Search from '../pages/Search';
 import SubDetail from '../pages/SubDetail';
-import Sub from '../pages/Sub';
 import Thread from '../pages/Thread';
 
 function MainRouter() {
@@ -12,7 +11,7 @@ function MainRouter() {
     <Routes>
       <Route path="/" element={<Main />} />
       <Route path="main" element={<Main />} />
-      <Route path="sub" element={<Sub />} />
+      <Route path="sub" element={<Main />} />
       <Route path="sub">
         <Route path=":id" element={<SubDetail />} />
       </Route>
