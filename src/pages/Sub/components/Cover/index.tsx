@@ -9,5 +9,5 @@ export interface CoverProps {
 export default function Cover(props: CoverProps) {
   const { src } = props;
 
-  return <StyledImage alt="cover" src={src} />;
+  return <StyledImage alt="cover" src={src || '/assets/default_cover.jpg'} />;
 }
