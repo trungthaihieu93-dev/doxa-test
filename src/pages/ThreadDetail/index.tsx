@@ -4,6 +4,7 @@ import { useQuery } from 'react-query';
 import moment from 'moment';
 
 import Votes from '../../core/components/Votes';
+import Interactions from '../../core/components/Interactions';
 import { initialThread, Thread } from '../../core/types/thread';
 import { initialSub, Sub } from '../../core/types/sub';
 import { getSubById } from '../../services/sub';
@@ -54,11 +55,12 @@ export default function ThreadDetail() {
           <StyledSubName>{sub?.subName}</StyledSubName>
           <StyledPosterInfo>
             Posted by <b>{thread?.poster}</b> at
-            {moment(thread?.createdAt).format(' hh:mm dd/MM/YYYY')}
+            {moment(thread?.createdAt).format(' hh:mm MMM, DD, YYYY')}
           </StyledPosterInfo>
         </StyledSupInfoContainer>
         <StyledTitle>{thread?.title}</StyledTitle>
         <StyledDescription>{thread?.description}</StyledDescription>
+        <Interactions numOfComments={thread?.numOfComments || 0} />
       </StyledGeneralInfoContainer>
     </StyledContainer>
   );

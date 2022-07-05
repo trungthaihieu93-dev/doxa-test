@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
 export const StyledContainer = styled.div`
-  background-color: #ffffff;
+  display: flex;
   width: 80%;
+  height: 60vh;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
   flex-direction: row;
   padding-top: 20px;
+  background-color: #ffffff;
 `;
 
 export const StyledVoteContainer = styled.div`
@@ -54,4 +55,6 @@ export const StyledTitle = styled.span`
   margin-top: 20px;
 `;
 
-export const StyledDescription = styled.p``;
+export const StyledDescription = styled.p`
+  margin-bottom: 100px;
+`;

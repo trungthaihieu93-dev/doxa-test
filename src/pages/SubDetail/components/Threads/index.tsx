@@ -8,15 +8,12 @@ import { SUB_ROUTE, THREAD_ROUTE } from '../../../../router/routes';
 import {
   StyledContainer,
   StyledGeneralInfoContainer,
-  StyledInteractionContainer,
-  StyledInteractionIcon,
-  StyledInteractionText,
-  StyledVerticalDivider,
   StyledSubtitle,
   StyledThreadContainer,
   StyledTitle,
 } from './styled';
 import Votes from '../../../../core/components/Votes';
+import Interactions from '../../../../core/components/Interactions';
 
 export interface ThreadsProps {
   threads: Thread[];
@@ -43,22 +40,9 @@ export default function Threads(props: ThreadsProps) {
             <StyledTitle>{thread.title}</StyledTitle>
             <StyledSubtitle>
               Posted by <b>{thread.poster}</b> at
-              {moment(thread.createdAt).format(' hh:mm dd/MM/YYYY')}
+              {moment(thread.createdAt).format(' hh:mm MMM, DD, YYYY')}
             </StyledSubtitle>
-            <StyledInteractionContainer>
-              <StyledInteractionIcon alt="preview" src="/assets/preview.svg" />
-              <StyledVerticalDivider />
-              <StyledInteractionIcon alt="comment" src="/assets/comment.svg" />
-              <StyledInteractionText>Comment</StyledInteractionText>
-              <StyledInteractionIcon alt="share" src="/assets/share.svg" />
-              <StyledInteractionText>Share</StyledInteractionText>
-              <StyledInteractionIcon alt="save" src="/assets/save.svg" />
-              <StyledInteractionText>Save</StyledInteractionText>
-              <StyledInteractionIcon alt="hide" src="/assets/hide.svg" />
-              <StyledInteractionText>Hide</StyledInteractionText>
-              <StyledInteractionIcon alt="report" src="/assets/report.svg" />
-              <StyledInteractionText>Report</StyledInteractionText>
-            </StyledInteractionContainer>
+            <Interactions numOfComments={thread.numOfComments || 0} />
           </StyledGeneralInfoContainer>
         </StyledThreadContainer>
       ))}
