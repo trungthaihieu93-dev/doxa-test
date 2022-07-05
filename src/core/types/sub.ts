@@ -3,3 +3,9 @@ export interface Sub {
   subName: string;
   subAvatar: string;
 }
+
+export const initialSub: Sub = {
+  id: '',
+  subAvatar: '',
+  subName: '',
+};

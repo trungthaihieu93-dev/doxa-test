@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import moment from 'moment';
 
 import { Thread } from '../../../../core/types/thread';
-import { THREAD_ROUTE } from '../../../../router/routes';
+import { SUB_ROUTE, THREAD_ROUTE } from '../../../../router/routes';
 
 import {
   StyledContainer,
@@ -12,22 +12,21 @@ import {
   StyledInteractionIcon,
   StyledInteractionText,
   StyledVerticalDivider,
-  StyledNumberOfVotes,
   StyledSubtitle,
   StyledThreadContainer,
   StyledTitle,
-  StyledVoteContainer,
-  StyledVoteIcon,
 } from './styled';
+import Votes from '../../../../core/components/Votes';
 
 export interface ThreadsProps {
   threads: Thread[];
+  sId: string;
   sortType?: string;
 }
 
 export default function Threads(props: ThreadsProps) {
   const navigateTo = useNavigate();
-  const { threads, sortType } = props;
+  const { threads, sId, sortType } = props;
 
   return (
     <StyledContainer>
@@ -35,13 +34,11 @@ export default function Threads(props: ThreadsProps) {
       {threads.map((thread) => (
         <StyledThreadContainer
           key={thread.id}
-          onClick={() => navigateTo(THREAD_ROUTE)}
+          onClick={() =>
+            navigateTo(`${SUB_ROUTE}/${sId}${THREAD_ROUTE}/${thread.id}`)
+          }
         >
-          <StyledVoteContainer>
-            <StyledVoteIcon alt="upvote" src="/assets/up_arrow.svg" />
-            <StyledNumberOfVotes>{thread.numOfVotes}</StyledNumberOfVotes>
-            <StyledVoteIcon alt="downvote" src="/assets/down_arrow.svg" />
-          </StyledVoteContainer>
+          <Votes numOfVotes={thread.numOfVotes} />
           <StyledGeneralInfoContainer>
             <StyledTitle>{thread.title}</StyledTitle>
             <StyledSubtitle>

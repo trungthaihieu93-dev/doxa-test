@@ -42,7 +42,7 @@ export default function SubDetail() {
       />
       <Tabs />
       <Filter />
-      <Threads threads={threads || []} />
+      <Threads threads={threads || []} sId={subId} />
     </StyledContainer>
   );
 }

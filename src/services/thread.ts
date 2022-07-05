@@ -8,3 +8,6 @@ export const getThreadsBySub = async (subId: string) =>
       `${THREAD_ENDPOINT}?${new URLSearchParams({ sub: subId }).toString()}`
     )
   ).data;
+
+export const getThreadById = async (threadId: string) =>
+  (await get<Thread>(`${THREAD_ENDPOINT}/${threadId}`)).data;
