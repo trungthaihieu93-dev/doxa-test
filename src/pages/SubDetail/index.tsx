@@ -17,7 +17,7 @@ export default function SubDetail() {
       <Helmet>
         <title>Sub {params.id}</title>
       </Helmet>
-      <Cover src="" />
+      <Cover cover="" subAvatar="" subName="" />
       <Tabs />
       <Filter />
       <Threads threads={[]} />

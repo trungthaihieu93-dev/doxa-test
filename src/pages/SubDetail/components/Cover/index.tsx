@@ -1,13 +1,34 @@
 import React from 'react';
 
-import { StyledImage } from './styled';
+import {
+  StyledImage,
+  StyledContainer,
+  StyledSubInfoContainer,
+  StyedSubName,
+  StyledSubAvatar,
+} from './styled';
 
 export interface CoverProps {
-  src: string;
+  cover: string;
+  subName: string;
+  subAvatar: string;
 }
 
 export default function Cover(props: CoverProps) {
-  const { src } = props;
+  const { cover, subAvatar, subName } = props;
 
-  return <StyledImage alt="cover" src={src || '/assets/default_cover.jpg'} />;
+  return (
+    <StyledContainer>
+      <StyledImage alt="cover" src={cover || '/assets/default_cover.jpg'} />;
+      <div>
+        <StyledSubInfoContainer>
+          <StyledSubAvatar
+            alt="subAvatar"
+            src={subAvatar || '/assets/reddit.svg'}
+          />
+          <StyedSubName>Sub</StyedSubName>
+        </StyledSubInfoContainer>
+      </div>
+    </StyledContainer>
+  );
 }
