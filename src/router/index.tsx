@@ -1,19 +1,20 @@
 import React from 'react';
-import { Routes } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
-import MainRoutes from './main';
-import SubRoutes from './sub';
-import SearchRoutes from './search';
-import ThreadRoutes from './thread';
+import Main from '../pages/Main';
+import Search from '../pages/Search';
+import Sub from '../pages/Sub';
+import Thread from '../pages/Thread';
 
 function MainRouter() {
   return (
-    <>
-      <MainRoutes />
-      <SubRoutes />
-      <SearchRoutes />
-      <ThreadRoutes />
-    </>
+    <Routes>
+      <Route path="/" element={<Main />} />
+      <Route path="main" element={<Main />} />
+      <Route path="sub" element={<Sub />} />
+      <Route path="search" element={<Search />} />
+      <Route path="thread" element={<Thread />} />
+    </Routes>
   );
 }
 

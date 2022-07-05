@@ -1,5 +1,12 @@
 import React from 'react';
 
+import { StyledContainer } from './styled';
+import Cover from './components/Cover';
+
 export default function Sub() {
-  return <div>Sub</div>;
+  return (
+    <StyledContainer>
+      <Cover src="" />
+    </StyledContainer>
+  );
 }
