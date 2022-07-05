@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Remember to pre-install [NodeJS](https://nodejs.org/en/)
+
+and Yarn buy this command `npm install -g yarn` (Might need command prefix `sudo`)
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -39,8 +43,10 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### `yarn mock`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Run the mock server at [http://localhost:4000](http://localhost:4000)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Setup Environment
+
+Run this command `cp -i ./.env.example ./.env.local` and add the value `http://localhost:4000` for var `REACT_APP_API_URL`
